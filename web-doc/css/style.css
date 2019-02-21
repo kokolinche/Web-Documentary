@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    padding: 0.7em;
+    margin: 0.5em;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0.5em;
+    padding: 0.7em;
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+.fade-in-bck {
+    -webkit-animation: fade-in-bck 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+    animation: fade-in-bck 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+
+.text-pop-up-top {
+    width: 10%;
+    height: auto;
+    margin-top: 1em;
+    padding-top: 1em;
+    -webkit-animation: text-pop-up-top 2.1s linear infinite alternate-reverse forwards;
+    animation: text-pop-up-top 2.1s linear infinite alternate-reverse forwards;
+}
+
+.text-pop-up-child {
+    width: 10%;
+    height: auto;
+    margin-top: 1em;
+    -webkit-animation: text-pop-up-top 2.1s linear infinite alternate-reverse forwards;
+    animation: text-pop-up-top 2.1s linear infinite alternate-reverse forwards;
+}
+
+.basic-info img {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.basic-info p {
+    background-color: #F9812A;
+    color: white;
+}
+
+video {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+.container {
+    text-align: center;
+}
+
+.cardCont {
+    display: inline-block;
+
+}
+
+.Card {
+    height: 360px;
+    width: 350px;
+    border: 1px solid white;
+    transition: all .4s;
+    margin-left: 30px;
+}
+
+.Card p {
+    margin: 5%;
+}
+
+.cardCont:hover .Card {
+    transform: rotateY(-180deg);
+
+}
+
+.Card .front1,
+.Card .front2,
+.Card .front3,
+.Card .back {
+    transition: all .1s;
+    transition-delay: .2s;
+
+}
+
+.Card .back {
+    transform: rotateY(180deg);
+    display: none;
+    width: 100%;
+    background-color: #F9812A;
+    color: white;
+
+}
+
+.cardCont:hover .Card .front1 {
+    display: none;
+}
+
+.cardCont:hover .Card .front2 {
+    display: none;
+}
+
+.cardCont:hover .Card .front3 {
+    display: none;
+}
+
+.cardCont:hover .Card .back {
+    display: inline-block;
+}
+
+
+.end {
+    text-align: center;
+}
+
+
+/*
+#text-left:after,
+#text-right:after {
+    display: none;
+}
+*/
+
+.column-right {
+    width: 45%;
+    padding: 1em;
+}
+
+.column-left {
+    width: 45%;
+    padding: 1em;
+}
+
+.column-left p,
+.column-right p {
+    padding: 7%;
+    text-align: left;
+}
+
+footer {
+    background-color: black;
+    opacity: 0.9;
+    display: flex;
+    flex-flow: row;
+    flex-basis: auto;
+    justify-content: space-evenly;
+
+}
+
+footer img {
+    padding: 8%;
+    margin: auto;
+    width: 55%;
+
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #F9812A;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+
+
+div#cta-book-travel {
+    margin-top: -100px;
+}
+
+
+.tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/*Tablet version begins*/
+@media only screen and (min-width: 590px) {
+
+    footer img {
+        width: 50%;
+        padding-left: 20%;
+
+    }
+
+}
+
+/*Desktop version begins*/
+
+
+@media only screen and (min-width:889px) {
+
+
+
+    body {
+        font-size: 20px;
+    }
+
+
+    /*
+    #text-left:after,
+    #text-right:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+*/
+
+
+    .column-right {
+        float: right;
+        width: 50%;
+        padding: 1em;
+    }
+
+    .column-left {
+        float: left;
+        width: 50%;
+        padding: 1em;
+    }
+
+    .column-left p,
+    .column-right p {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .column-left img {
+        margin-top: 5.3em;
+        width: 70%;
+    }
+
+    .column-right img {
+        margin-top: 4.5em;
+        width: 80%;
+    }
+
+    footer img {
+        width: 50%;
+        margin: auto;
+        padding-left: 25%;
+    }
+}
+
+
+@media only screen and (min-width: 1100px) {
+    main {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    body p {
+        font-size: 20px;
+    }
+.text-pop-up-top {
+    width: 7%;
+}
+
+.text-pop-up-child {
+    width: 7%;
+}
+    #text-left:after,
+    #text-right:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    footer img {
+        width: 60%;
+        margin: auto;
+        padding-left: 35%;
+    }
+
+}
+
+@-webkit-keyframes text-pop-up-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@-webkit-keyframes text-pop-up-child {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-2-18 9:34:13
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
